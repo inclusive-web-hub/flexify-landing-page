@@ -34,7 +34,7 @@ const Banner = () => {
                 </p>
                 <ul>
                   <li>
-                    <a href="/">
+                    <a href="https://gateway.ipfscdn.io/ipfs/QmWCGXhWmrPuJrCeCPiDXvfua32LkguDWMkFXpg18A2hJQ">
                       <i className="fa  fa-chrome"></i>
                       <span>Try it Now!</span>
                     </a>
