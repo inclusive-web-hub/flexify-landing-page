@@ -34,7 +34,7 @@ const Banner = () => {
                 </p>
                 <ul>
                   <li>
-                    <a href="https://gateway.ipfscdn.io/ipfs/QmWCGXhWmrPuJrCeCPiDXvfua32LkguDWMkFXpg18A2hJQ">
+                    <a href="https://thirdweb-hill-climb.netlify.app/">
                       <i className="fa  fa-chrome"></i>
                       <span>Try it Now!</span>
                     </a>
