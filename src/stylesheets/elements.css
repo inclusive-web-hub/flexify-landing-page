@@ -1,0 +1,201 @@
+/*-----------------------form-control-------------------------*/
+.form-control {
+  display: block;
+  border-radius: 30px;
+  width: 100%;
+  height: 60px;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #454360;
+  background-color: #fff;
+  background-image: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: 0;
+}
+
+.form-control::-webkit-input-placeholder {
+  /* Edge */
+  color: #aeacca;
+}
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aeacca;
+}
+
+.form-control::placeholder {
+  color: #aeacca;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.input-group-addon {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/*-----------------------alert-------------------------*/
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+/*-----------------------experience-education-------------------------*/
+
+.timeline {
+  position: relative;
+}
+
+.timeline .timeline-container {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+.timeline .timeline-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.timeline.edu .timeline-container::after {
+  content: "🎓";
+  background: transparent;
+  font-family: "simple-line-icons";
+  font-size: 24px;
+  color: #6c6ce5;
+  position: absolute;
+  left: -12px;
+  top: -8px;
+  z-index: 1;
+}
+
+.timeline.exp .timeline-container::after {
+  content: "💼";
+  background: transparent;
+  font-family: "simple-line-icons";
+  font-size: 24px;
+  color: #6c6ce5;
+  position: absolute;
+  left: -12px;
+  top: -8px;
+  z-index: 1;
+}
+
+.timeline .content {
+  position: relative;
+}
+
+.timeline .content .time {
+  color: #8b88b1;
+  font-size: 14px;
+}
+
+.timeline .content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.timeline .content p {
+  margin: 0;
+}
+
+.timeline span.line {
+  position: absolute;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #6c6ce5 0,
+    #6c6ce5 5px,
+    transparent 3px,
+    transparent 7px
+  );
+
+  top: 30px;
+  bottom: 30px;
+  left: 60px;
+}
+
+/*-----------------------helper-------------------------*/
+
+.rounded {
+  border-radius: 20px !important;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.shadow-dark,
+.form-control,
+.form-control:focus {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+}
+
+.shadow-light {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.01);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.01);
+  box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.01);
+}
+
+.shadow-blue {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(108, 108, 229, 0.5);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(108, 108, 229, 0.5);
+  box-shadow: 0px 5px 20px 0px rgba(108, 108, 229, 0.5);
+}
+
+.shadow-pink {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(249, 123, 139, 0.5);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(249, 123, 139, 0.5);
+  box-shadow: 0px 5px 20px 0px rgba(249, 123, 139, 0.5);
+}
+
+.shadow-yellow {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(249, 215, 76, 0.5);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(249, 215, 76, 0.5);
+  box-shadow: 0px 5px 20px 0px rgba(249, 215, 76, 0.5);
+}
+
+.padding-30 {
+  padding: 30px;
+}
+
+.text-light h1,
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6 {
+  color: #fff;
+}
+
+/* Styles for dialog window */
+.white-popup {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  max-width: 650px;
+  margin: 40px auto;
+  position: relative;
+}
