@@ -1,0 +1,55 @@
+.headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .headline {
+    font-size: 6rem;
+  }
+}
+
+.words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.words-wrapper b.is-visible {
+  position: relative;
+}
+/* --------------------xclip--------------------- */
+.headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+.headline.clip .words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.headline.clip .words-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+}
+.headline.clip b {
+  opacity: 0;
+}
+.headline.clip b.is-visible {
+  opacity: 1;
+}
