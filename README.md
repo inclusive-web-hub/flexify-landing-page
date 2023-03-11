@@ -1,5 +1,7 @@
 # Flexify Landing Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/050e21ec-4c00-486e-83a3-67c3ec2403a3/deploy-status)](https://app.netlify.com/sites/flexify-web/deploys)
+
 ### Running locally with NPM
 
 - Fork/Clone the repo:
