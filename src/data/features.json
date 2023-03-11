@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Color Blind Friendly",
+    "content": "Shift red and green towards blue.",
+    "imageBefore": "/images/features/color-blind-before.png",
+    "imageAfter": "/images/features/color-blind-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 2,
+    "title": "Dyslexia Friendly",
+    "content": "Increase readability.",
+    "imageBefore": "/images/features/dyslexia-before.png",
+    "imageAfter": "/images/features/dyslexia-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 3,
+    "title": "Visually Pleasing",
+    "content": "Improve website's visuals.",
+    "imageBefore": "/images/features/visually-pleasing-before.png",
+    "imageAfter": "/images/features/visually-pleasing-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 4,
+    "title": "Cognitive Friendly",
+    "content": "Help to focus on links, buttons, titles.",
+    "imageBefore": "/images/features/cognitive-friendly-before.png",
+    "imageAfter": "/images/features/cognitive-friendly-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 5,
+    "title": "ADHD Friendly",
+    "content": "Reduce distractions and improve focus.",
+    "imageBefore": "/images/features/adhd-friendly-before.png",
+    "imageAfter": "/images/features/adhd-friendly-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 6,
+    "title": "Text Magnifier",
+    "content": "Help to read small text. Hover over text.",
+    "imageBefore": "/images/features/text-magnifier-before.png",
+    "imageAfter": "/images/features/text-magnifier-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 7,
+    "title": "Text Alignment",
+    "content": "Align text to the left, center, or right.",
+    "imageBefore": "/images/features/text-align-before.png",
+    "imageAfter": "/images/features/text-align-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 8,
+    "title": "Dark Contrast",
+    "content": "Support dark contrast mode.",
+    "imageBefore": "/images/features/dark-contrast-before.png",
+    "imageAfter": "/images/features/dark-contrast-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  },
+  {
+    "id": 9,
+    "title": "Colors",
+    "content": "Ability to change text and background colors.",
+    "imageBefore": "/images/features/text-background-colors-before.png",
+    "imageAfter": "/images/features/text-background-colors-after.png",
+    "color": "#000000",
+    "contentColor": "light"
+  }
+]

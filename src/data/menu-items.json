@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "link": "#about",
+    "name": "About"
+  },
+  {
+    "id": 2,
+    "link": "#features",
+    "name": "Features"
+  },
+  {
+    "id": 3,
+    "link": "#roadmap",
+    "name": "Roadmap"
+  },
+  {
+    "id": 4,
+    "link": "#faq",
+    "name": "Faq"
+  },
+  {
+    "id": 5,
+    "link": "#team",
+    "name": "Team"
+  }
+]

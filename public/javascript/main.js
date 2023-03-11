@@ -4,103 +4,120 @@
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll(".needs-validation")
     // Loop over them and prevent submission
-    Array.prototype.slice.call(forms).forEach(function (form) {
-      form.addEventListener(
-        "submit",
-        function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
+    Array.prototype.slice
+      .call(forms)
+      .forEach(function (
+        /** @type {{ addEventListener: (arg0: string, arg1: (event: any) => void, arg2: boolean) => void; checkValidity: () => any; classList: { add: (arg0: string) => void; }; }} */ form
+      ) {
+        form.addEventListener(
+          "submit",
+          function (
+            /** @type {{ preventDefault: () => void; stopPropagation: () => void; }} */ event
+          ) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
 
-          form.classList.add("was-validated")
-        },
-        false
-      )
-    })
+            form.classList.add("was-validated")
+          },
+          false
+        )
+      })
   }
   var move_selector = function () {
-    var currentMenuType = "desktop"
-
-    $(window).on("load scroll resize", function (e) {
-      if (matchMedia("only screen and (max-width: 991px)").matches) {
-        setTimeout(function () {
-          var topMenu = $(".mainnav ul > li"),
-            offset = 40,
-            topMenuHeight = topMenu.outerHeight() + offset,
-            // All list items
-            menuItems = topMenu.find('a[href*="#"]'),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function () {
-              var href = $(this).attr("href"),
-                id = href.substring(href.indexOf("#")),
-                item = $(id)
-              if (item.length) {
-                return item
-              }
+    $(window).on(
+      "load scroll resize",
+      function (/** @type {{ stopImmediatePropagation: () => void; }} */ e) {
+        if (matchMedia("only screen and (max-width: 991px)").matches) {
+          setTimeout(function () {
+            var topMenu = $(".mainnav ul > li"),
+              offset = 40,
+              topMenuHeight = topMenu.outerHeight() + offset,
+              // All list items
+              menuItems = topMenu.find('a[href*="#"]'),
+              // Anchors corresponding to menu items
+              scrollItems = menuItems.map(function () {
+                var href = $(this).attr("href"),
+                  id = href.substring(href.indexOf("#")),
+                  item = $(id)
+                if (item.length) {
+                  return item
+                }
+              })
+            // Get container scroll position
+            var fromTop = $(this).scrollTop() + topMenuHeight
+            // Get id of current scroll item
+            var cur = scrollItems.map(function () {
+              if ($(this).offset().top < fromTop) return this
             })
-          // Get container scroll position
-          var fromTop = $(this).scrollTop() + topMenuHeight
-          // Get id of current scroll item
-          var cur = scrollItems.map(function () {
-            if ($(this).offset().top < fromTop) return this
-          })
-          // Get the id of the current element
-          cur = cur[cur.length - 1]
-          var id = cur && cur.length ? cur[0].id : ""
+            // Get the id of the current element
+            cur = cur[cur.length - 1]
+            var id = cur && cur.length ? cur[0].id : ""
 
-          menuItems.parent().siblings().children().removeClass("active")
-          if (id) {
-            e.stopImmediatePropagation()
-            menuItems
-              .parent()
-              .end()
-              .filter("[href*='#" + id + "']")
-              .addClass("active")
-              .next("ul")
-              .slideToggle(300)
-          }
-        }, 100)
-      } else {
-        setTimeout(function () {
-          var topMenu = $(".mainnav ul > li"),
-            offset = 40,
-            topMenuHeight = topMenu.outerHeight() + offset,
-            // All list items
-            menuItems = topMenu.find('a[href*="#"]'),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function () {
-              var href = $(this).attr("href"),
-                id = href.substring(href.indexOf("#")),
-                item = $(id)
-              if (item.length) {
-                return item
-              }
+            menuItems.parent().siblings().children().removeClass("active")
+            if (id) {
+              e.stopImmediatePropagation()
+              menuItems
+                .parent()
+                .end()
+                .filter("[href*='#" + id + "']")
+                .addClass("active")
+                .next("ul")
+                .slideToggle(300)
+            }
+          }, 100)
+        } else {
+          setTimeout(function () {
+            var topMenu = $(".mainnav ul > li"),
+              offset = 40,
+              topMenuHeight = topMenu.outerHeight() + offset,
+              // All list items
+              menuItems = topMenu.find('a[href*="#"]'),
+              // Anchors corresponding to menu items
+              scrollItems = menuItems.map(function () {
+                var href = $(this).attr("href"),
+                  id = href.substring(href.indexOf("#")),
+                  item = $(id)
+                if (item.length) {
+                  return item
+                }
+              })
+            // Get container scroll position
+            var fromTop = $(this).scrollTop() + topMenuHeight
+            // Get id of current scroll item
+            var cur = scrollItems.map(function () {
+              if ($(this).offset().top < fromTop) return this
             })
-          // Get container scroll position
-          var fromTop = $(this).scrollTop() + topMenuHeight
-          // Get id of current scroll item
-          var cur = scrollItems.map(function () {
-            if ($(this).offset().top < fromTop) return this
-          })
 
-          // Get the id of the current element
-          cur = cur[cur.length - 1]
-          var id = cur && cur.length ? cur[0].id : ""
+            // Get the id of the current element
+            cur = cur[cur.length - 1]
+            var id = cur && cur.length ? cur[0].id : ""
 
-          menuItems.parent().siblings().children().removeClass("active")
-          if (id) {
-            e.stopImmediatePropagation()
-            menuItems
-              .parent()
-              .end()
-              .filter("[href*='#" + id + "']")
-              .addClass("active")
-              .next("ul")
-              .slideToggle(300)
-          }
-        }, 100)
+            menuItems.parent().siblings().children().removeClass("active")
+            if (id) {
+              e.stopImmediatePropagation()
+              menuItems
+                .parent()
+                .end()
+                .filter("[href*='#" + id + "']")
+                .addClass("active")
+                .next("ul")
+                .slideToggle(300)
+            }
+          }, 100)
+        }
       }
+    )
+  }
+  var before_after_effect = function () {
+    $(".twentytwenty-container").twentytwenty({
+      default_offset_pct: 0.25, // How much of the before image is visible when the page loads
+      orientation: "horizontal", // Orientation of the before and after images ('horizontal' or 'vertical')t a custom after label
+      no_overlay: true, //Do not show the overlay with before and after
+      move_slider_on_hover: true, // Move slider on mouse hover?
+      move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement.
+      click_to_move: false, // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
     })
   }
   var tilt_effect = function () {
@@ -113,9 +130,7 @@
   }
   var header_sticky = function () {
     if ($("div").hasClass("counter-scroll")) {
-      var hd_height = $("#header").height()
-
-      $(window).on("load scroll resize", function (e) {
+      $(window).on("load scroll resize", function (/** @type {any} */ e) {
         var header = $("#header")
         if ($(window).scrollTop() > 0) {
           header.addClass("header-shadow")
@@ -141,12 +156,6 @@
         if (currMenuType === "mobile") {
           var $mobileMenu = $("#mainnav").attr("id", "mainnav-mobi")
           var hasChildMenu = $("#mainnav-mobi").find("li:has(ul)")
-          var logomobileMenu = $("#mainnav-mobi")
-            .find("ul.menu >li")
-            .first()
-            .before(
-              '<li id="logo" class="logo-mobi"><a href="/"><img src="images/logo.png" alt="logo" width="132"></a></li>'
-            )
 
           $("#header").after($mobileMenu)
           hasChildMenu.children("ul").hide()
@@ -181,8 +190,6 @@
         offset = header.data("offset")
       }
 
-      var $top =
-        $(window).scrollTop() + header.height() + header.position().top + offset
       $(this).toggleClass("active")
       $(this)
         .closest(".header")
@@ -190,10 +197,14 @@
         .toggleClass("active")
     })
 
-    $(document).on("click", "#mainnav-mobi li .btn-submenu", function (e) {
-      $(this).toggleClass("active").next("ul").slideToggle(300)
-      e.stopImmediatePropagation()
-    })
+    $(document).on(
+      "click",
+      "#mainnav-mobi li .btn-submenu",
+      function (/** @type {{ stopImmediatePropagation: () => void; }} */ e) {
+        $(this).toggleClass("active").next("ul").slideToggle(300)
+        e.stopImmediatePropagation()
+      }
+    )
 
     $(document).on("click", "#mobile-menu-overlay", function () {
       $(this).toggleClass("active")
@@ -206,10 +217,14 @@
       }
     })
 
-    $(document).on("click", ".scroll-down li a", function (e) {
-      $(this).toggleClass("active").next("ul").slideToggle(300)
-      e.stopImmediatePropagation()
-    })
+    $(document).on(
+      "click",
+      ".scroll-down li a",
+      function (/** @type {{ stopImmediatePropagation: () => void; }} */ e) {
+        $(this).toggleClass("active").next("ul").slideToggle(300)
+        e.stopImmediatePropagation()
+      }
+    )
 
     $(document).on("click", ".scroll-down li a", function () {
       if ($(this).hasClass("click-model")) {
@@ -234,45 +249,49 @@
   }
 
   var onepage_nav = function () {
-    $(".mainnav > ul > li > a").on("click", function (e) {
-      var anchor = $(this).attr("href").split("#")[1]
-      var largeScreen = matchMedia("only screen and (min-width: 992px)").matches
-      var headerHeight = 0
-      headerHeight = $(".header").height()
-      if (anchor) {
-        if ($("#" + anchor).length > 0) {
-          if ($(".header-shadow").length > 0) {
-            headerHeight = headerHeight
-          } else {
-            headerHeight = 0
+    $(".mainnav > ul > li > a").on(
+      "click",
+      function (/** @type {{ preventDefault: () => void; }} */ e) {
+        var anchor = $(this).attr("href").split("#")[1]
+        var headerHeight = 0
+        headerHeight = $(".header").height()
+        if (anchor) {
+          if ($("#" + anchor).length > 0) {
+            if ($(".header-shadow").length > 0) {
+              headerHeight = headerHeight
+            } else {
+              headerHeight = 0
+            }
+            var target = $("#" + anchor).offset().top - headerHeight
+            $("html,body").animate({ scrollTop: target }, 1000, "easeInOutExpo")
           }
-          var target = $("#" + anchor).offset().top - headerHeight
-          $("html,body").animate({ scrollTop: target }, 1000, "easeInOutExpo")
         }
+
+        e.preventDefault()
       }
+    )
 
-      e.preventDefault()
-    })
-
-    $(".scroll-down > ul > li > a").on("click", function (e) {
-      var anchor = $(this).attr("href").split("#")[1]
-      var largeScreen = matchMedia("only screen and (min-width: 992px)").matches
-      var headerHeight = 0
-      headerHeight = $(".header").height()
-      if (anchor) {
-        if ($("#" + anchor).length > 0) {
-          if ($(".header-shadow").length > 0) {
-            headerHeight = headerHeight
-          } else {
-            headerHeight = 0
+    $(".scroll-down > ul > li > a").on(
+      "click",
+      function (/** @type {{ preventDefault: () => void; }} */ e) {
+        var anchor = $(this).attr("href").split("#")[1]
+        var headerHeight = 0
+        headerHeight = $(".header").height()
+        if (anchor) {
+          if ($("#" + anchor).length > 0) {
+            if ($(".header-shadow").length > 0) {
+              headerHeight = headerHeight
+            } else {
+              headerHeight = 0
+            }
+            var target = $("#" + anchor).offset().top - headerHeight
+            $("html,body").animate({ scrollTop: target }, 1000, "easeInOutExpo")
           }
-          var target = $("#" + anchor).offset().top - headerHeight
-          $("html,body").animate({ scrollTop: target }, 1000, "easeInOutExpo")
         }
-      }
 
-      e.preventDefault()
-    })
+        e.preventDefault()
+      }
+    )
 
     $(".mainnav ul > li > a").on("click", function () {
       $(this)
@@ -292,5 +311,6 @@
     goTop()
     onepage_nav()
     tilt_effect()
+    before_after_effect()
   })
 })(jQuery)

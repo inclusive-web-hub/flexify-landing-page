@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "❓ What is Flexify?",
+    "content": "Flexify is an open source cross browser add-on! It provides stunning accessibility features and functionality for people with disabilities. Enjoy using Flexify and have a unique internet experience with a click of a button!",
+    "show": false
+  },
+  {
+    "id": 2,
+    "title": "♿ What disabilities does the extension cater to?",
+    "content": "This accessibility extension is designed to cater to a range of disabilities, including but not limited to visual impairments, blindness, and cognitive impairments.",
+    "show": false
+  },
+  {
+    "id": 3,
+    "title": "💡 What features does the tool offer?",
+    "content": "The accessibility tool extension offers a range of features that are customizable to individual needs. Some of these features include text-to-speech, high-contrast mode, keyboard navigation, and screen reader compatibility.",
+    "show": false
+  },
+  {
+    "id": 4,
+    "title": "🆓 Is the extension free to use?",
+    "content": "Yes, Flexify is an open source extension that is free to use and can be downloaded from the web store of your preferred web browser.",
+    "show": false
+  },
+  {
+    "id": 5,
+    "title": "🌐 What platforms are supported by Flexify?",
+    "content": "Flexify is cross browser extension. It is also planned to be available on Android, iOS.",
+    "show": false
+  },
+  {
+    "id": 6,
+    "title": "🐛 Who can I contact if I encounter any issues?",
+    "content": "If you encounter any issues while using the extension, you can file a ticket on our Github Repo. Issue details can be found there.",
+    "show": false
+  }
+]

@@ -11,35 +11,35 @@
       style-src="['self', 'https://cdnjs.cloudflare.com', 'https://cdn.jsdelivr.net', ]"
     />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/16.png">
+<link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="A web3 Hill Climb Clone Powered by ThirdWeb GamingKit and ContractKit."
+      content="the ultimate extension that empowers you to modify and personalize any website on the internet."
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:url" content="https://wiseai.dev/" />
     <link rel="canonical" href="https://wiseai.dev/" />
-    <meta property="og:title" content="Hill Climb ThirdWeb" />
+    <meta property="og:title" content="Flexify ThirdWeb" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
-      content="A web3 Hill Climb Clone Powered by ThirdWeb GamingKit and ContractKit."
+      content="The ultimate extension that empowers you to modify and personalize any website on the internet."
     />
-    <meta property="og:site_name" content="Hill Climb ThirdWeb" />
+    <meta property="og:site_name" content="Flexify" />
     <meta
       property="og:image"
       content="https://media-exp1.licdn.com/dms/image/C4D03AQEe67ifoDQl3g/profile-displayphoto-shrink_800_800/0/1636967300806?e=1663804800&v=beta&t=g7cAsLp4HjwsSkyGQfhmApP_Ht026c465ih4-_GcXUs"
     />
-    <meta
-      name="google-site-verification"
-      content="bQ68UFUkP3C7UFrF8PyumOilQq1_ocTtuKaeOanBG5I"
-    />
+
     <meta name="copyright" content="Mahmoud Harmouch" />
     <meta name="author" content="Mahmoud Harmouch" />
     <meta
       name="keywords"
-      content="Web3, Hill Climb Clone, ThirdWeb, GamingKit, ContractKit."
+      content="a11y, accessibility, web."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--  Google Fonts  -->
@@ -106,18 +106,28 @@
       crossorigin="anonymous"
       defer
     ></script>
+
+    <script src="%PUBLIC_URL%/javascript/jquery.event.move.js" ></script>
+    <script src="%PUBLIC_URL%/javascript/jquery.twentytwenty.js" ></script>
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/twentytwenty.css" type="text/css" media="screen" />
+
     <script src="%PUBLIC_URL%/javascript/animation-text.js" defer></script>
     <script src="%PUBLIC_URL%/javascript/main.js" defer></script>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Hill Climb ThirdWeb</title>
+    <title>Flexify - A11Y</title>
   </head>
   <body class="dark-body">
-    <div id="root"></div>
+    <div id="root" class="d-none"></div>
     <div class="preloader">
-      <div class="lds-ripple">
-        <div class="lds-pos"></div>
-        <div class="lds-pos"></div>
-        <div class="lds-pos"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="preloader-logo">
+              <img src="/images/logo.png" alt="logo" loading="lazy" />
+            </div>
+            <span class="preloader-progress"></span>
+          </div>
+        </div>
       </div>
     </div>
     <div id="scroll-top"></div>

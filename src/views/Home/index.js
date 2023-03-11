@@ -1,7 +1,10 @@
 import Header from "../../components/Header"
 import Banner from "../../components/Banner"
 import AboutUs from "../../components/AboutUs"
-import GameItems from "../../components/GameItems"
+import Features from "../../components/Features"
+import RoadMap from "../../components/RoadMap"
+import Faq from "../../components/Faq"
+import Team from "../../components/Team"
 import Footer from "../../components/Footer"
 
 const Home = () => {
@@ -12,7 +15,10 @@ const Home = () => {
       <div id="content" className="content">
         <Banner />
         <AboutUs />
-        <GameItems />
+        <Features />
+        <RoadMap />
+        <Faq />
+        <Team />
         <Footer />
       </div>
     </div>
