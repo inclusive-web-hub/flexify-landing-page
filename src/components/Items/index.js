@@ -1,8 +1,7 @@
 import React from "react"
-import { AnimationOnScroll } from "react-animation-on-scroll"
 
 function Item({ item }) {
-  const { title, content, icon, color, contentColor } = item
+  const { title, content, imageBefore, imageAfter, color, contentColor } = item
   const hexToRgb = (hex) => {
     const temp = hex
       .replace(
@@ -16,28 +15,25 @@ function Item({ item }) {
   }
 
   return (
-    <AnimationOnScroll
-      animateIn="animate__fadeInUp"
-      animateOut="animate__fadeInOut"
-      animateOnce={true}
+    <div
+      className={
+        contentColor === "light"
+          ? "feature custom-box rounded data-background padding-30 text-center text-light shadow-blue border border-primary"
+          : "feature custom-box rounded data-background padding-30 text-center shadow-blue"
+      }
+      data-color="#6C6CE5"
+      style={{
+        background: color,
+        boxShadow: `0px 5px 20px 0px rgba(${hexToRgb(color)}, 0.5)`,
+      }}
     >
-      <div
-        className={
-          contentColor === "light"
-            ? "pt-5 custom-box rounded data-background padding-30 text-center text-light shadow-blue border border-primary"
-            : "custom-box rounded data-background padding-30 text-center shadow-blue"
-        }
-        data-color="#6C6CE5"
-        style={{
-          background: color,
-          boxShadow: `0px 5px 20px 0px rgba(${hexToRgb(color)}, 0.5)`,
-        }}
-      >
-        <h2>{icon}</h2>
-        <h3 className="mt-4">{title}</h3>
-        <p className="mb-5 mt-5">{content}</p>
+      <div className="twentytwenty-container">
+        <img src={imageBefore} loading="lazy" alt="before" />
+        <img src={imageAfter} loading="lazy" alt="after" />
       </div>
-    </AnimationOnScroll>
+      <h3 className="mt-3 text-primary">{title}</h3>
+      <p className="mb-2 mt-2">{content}</p>
+    </div>
   )
 }
 

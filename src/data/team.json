@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "img": "https://pbs.twimg.com/profile_images/1607319844378054657/e6r-3IWh_400x400.jpg",
+    "name": "Mahmoud Harmouch",
+    "position": "Engineer & Web Dev",
+    "socials": [
+      {
+        "id": 1,
+        "icon": "fab fa-twitter",
+        "link": "https://twitter.com/wiseaidev"
+      },
+      {
+        "id": 2,
+        "icon": "fab fa-github",
+        "link": "https://github.com/wiseaidev"
+      },
+      {
+        "id": 4,
+        "icon": "fab fa-linkedin",
+        "link": "https://www.linkedin.com/in/mahmoud-harmouch/"
+      }
+    ]
+  }
+]

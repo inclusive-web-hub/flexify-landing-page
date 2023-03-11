@@ -382,6 +382,11 @@ input::-webkit-input-placeholder {
   text-decoration: underline;
   text-underline-position: under;
 }
+
+.github-iframe-repo {
+  padding-top: 14px;
+  margin-left: -250px;
+}
 /*----------------------padding-------------------------------------*/
 .pd-l50 {
   padding-left: 50px;
@@ -603,14 +608,37 @@ input::-webkit-input-placeholder {
 /* ---------------------------banner------------------------------------- */
 .banner-section {
   padding: 220px 0 100px;
-  background: url("../../public/images/backgrounds/banner.jpg");
+  background: url("../../public/images/backgrounds/main.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
+.banner-section .heading-top {
+  font-size: 33px;
+}
+
+
+.banner-section .person-front {
+  margin-bottom: 120px;
+}
+
+.banner-section .person-front img:first-child {
+  box-shadow: 0 10px 40px rgb(0 0 0 0.07%);
+  border-radius: 10px;
+  max-width: 120%;
+}
+
+.banner-section .person-front img:last-child {
+  position: absolute;
+  right: 5%;
+  bottom: -30%;
+  height: 80%;
+  z-index: 1;
+}
 
 .banner-content.banner-content-inner .banner-title {
+  margin-top: 10px;
   font-weight: 700;
   font-size: 70px;
   line-height: 80px;
@@ -621,6 +649,14 @@ input::-webkit-input-placeholder {
     line-height: 70px;
   }
 }
+
+@media (max-width: 991px) {
+  .github-iframe-repo {
+    display: none;
+  }
+}
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-content.banner-content-inner .banner-title {
     font-size: 50px;
@@ -652,19 +688,20 @@ input::-webkit-input-placeholder {
 .banner-content.banner-content-inner ul li a i {
   font-size: 30px;
 }
+
 .banner-content.banner-content-inner ul li a:hover {
   background: #fff;
   color: blue;
   border-color: #fff;
 }
-.banner-content.banner-content-inner ul li a.banner-content-google-btn {
-  background: #fff;
+.banner-content.banner-content-inner ul li a.banner-content-firefox-btn {
+  background: transparent;
   border-color: #fff;
+  color: #fff;
 }
-.banner-content.banner-content-inner ul li a.banner-content-google-btn:hover {
+.banner-content.banner-content-inner ul li a.banner-content-firefox-btn:hover {
   background: blue;
   border-color: blue;
-  color: #fff;
 }
 .banner-content.banner-content-inner .banner-title {
   color: #fff;
@@ -693,7 +730,6 @@ input::-webkit-input-placeholder {
   background: #fff;
   color: blue;
 }
-background: transparent;
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-content {
@@ -799,15 +835,7 @@ background: transparent;
   position: relative;
   width: 150%;
   z-index: 10;
-  right: 20%;
-}
-.banner-section-image .thumb .back-image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: -1;
+  right: 10%;
 }
 
 .app-live-circle-section {
@@ -821,8 +849,8 @@ background: transparent;
   border: none;
   background: #ffffff;
   top: -45px;
-  right: 415px;
-  z-index: 1030;
+  right: 475px;
+  z-index: 11;
 }
 .app-live-circle-section .app-live-circle {
   display: flex;
@@ -837,25 +865,442 @@ background: transparent;
   position: absolute;
 }
 
-.anim_moveBottom {
-  animation: anim_moveBottom 3s linear 0s infinite alternate;
-}
-
-@keyframes anim_moveBottom {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(20px);
-  }
-}
-
 @media (max-width: 992px) {
   .app-live-circle-section {
     display: none;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .before-after {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .before-after {
+    margin-top: 40px;
+  }
+}
 
+.banner-section-image .thumb .back-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  width: 100%;
+  z-index: -1;
+}
+
+.banner-section-image .thumb .front-image {
+  transform: translate(14%, 5%);
+  width: 78%;
+}
+
+/* --------------------------roadmap--------------------------------- */
+
+.roadmap-section {
+  padding-top: 132px;
+  padding-bottom: 146px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0px;
+  background: url("../../public/images/backgrounds/main.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  min-height: 914px;
+  padding-bottom: 100px;
+}
+
+.roadmap-section .roadmap-divider {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+}
+
+.roadmap-section .roadmap-divider img {
+  height: 100%;
+}
+
+.roadmap-section .roadmap-top {
+  margin-left: 33px;
+  margin-bottom: -55px;
+}
+
+.roadmap-section .roadmap-card-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 52px;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-divider {
+  position: absolute;
+  top: 0px;
+  background: #5e84ff;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-card-item {
+  position: relative;
+  width: 95%;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-card-item.roadmap-card-item-even {
+  padding: 30px 0px 0px 30px;
+  margin-top: 80px;
+  margin-left: auto;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item.roadmap-card-item-even
+  .roadmap-card-box {
+  left: 0px;
+  top: 0px;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-card-item.roadmap-card-item-odd {
+  padding: 30px 30px 0px 0px;
+  margin: 0 auto 80px 0;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item.roadmap-card-item-odd
+  .roadmap-card-box {
+  right: 0px;
+  top: 0px;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-card-item .roadmap-card-box {
+  background: #5e84ff;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item
+  .roadmap-card-content:hover {
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(84, 63, 179, 0.41), #1a1b34 35%);
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item
+  .roadmap-card-content:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.roadmap-section .roadmap-card-list .roadmap-card-item .roadmap-card-content {
+  background: #000;
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item
+  .roadmap-card-content
+  h3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 34px;
+  color: #5e84ff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .roadmap-card-item
+  .roadmap-card-content
+  ul
+  li {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.roadmap-section
+  .roadmap-card-list
+  .row:nth-child(2)
+  .col-md-6
+  .roadmap-card-item-even {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .roadmap-card-list .roadmap-divider {
+    display: none;
+  }
+  .roadmap-card-list .roadmap-card-item {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .roadmap-card-list .roadmap-card-item.roadmap-card-item-even {
+    margin-top: 0px;
+  }
+
+  .roadmap-card-list .row:nth-child(2) .col-md-6 .roadmap-card-item-even {
+    margin-top: 0;
+  }
+}
+
+/*--------------------faq----------------------------- */
+.faq-section {
+  background: url("../../public/images/backgrounds/main.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.accordion-items {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.accordion-items .accordion-item {
+  margin-bottom: 21px;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid #5e84ff;
+  position: relative;
+  z-index: 1;
+  padding: 29px 23px 29px 19px;
+}
+.accordion-items .accordion-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.accordion-items .accordion-item::before,
+.accordion-items .accordion-item::after {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.accordion-items .accordion-item::before {
+  width: calc(102% - 3rem);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.accordion-items .accordion-item::after {
+  height: calc(110% - 3rem);
+  width: calc(100% + 4px);
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion-items .accordion-item.active,
+.accordion-items .accordion-item:hover {
+  border-color: #5e84ff;
+  box-shadow: 0 0px 32px 0 #5e84ff;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(84, 63, 179, 0.41), #1a1b34 35%);
+}
+
+.accordion-items .accordion-item.active,
+.accordion-items .accordion-item:hover:hover:before {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+.accordion-items .accordion-item.active::before,
+.accordion-items .accordion-item:hover::before {
+  width: 0 !important;
+}
+.accordion-items .accordion-item.active::after,
+.accordion-items .accordion-item:hover::after {
+  height: 0 !important;
+}
+.accordion-items .accordion-item .accordion-button {
+  position: relative;
+  background: transparent;
+  transform: translateY(0);
+  padding: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 !important;
+  color: #fff;
+  box-shadow: none;
+  font-size: 24px;
+  line-height: 1.33;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  border-bottom: 1px solid #5e84ff;
+  padding-bottom: 15px;
+  margin-bottom: 16px;
+}
+.accordion-items .accordion-item .accordion-button::after {
+  background-image: none;
+  content: "⤵";
+  font-weight: 500;
+  font-size: 25px;
+  color: #5e84ff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+}
+.accordion-items .accordion-item .accordion-button.collapsed {
+  border-bottom: 1px solid rgba(3, 253, 203, 0);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.accordion-items .accordion-item .accordion-collapse {
+  background: transparent;
+}
+.accordion-items .accordion-item .accordion-collapse .accordion-body {
+  padding: 0;
+}
+.accordion-items .accordion-item.corner-box {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 28px 18px 11px;
+}
+.accordion-items .accordion-item.corner-box .toggle-title {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #5e84ff;
+  padding-bottom: 16px;
+  margin-bottom: 0;
+  position: relative;
+  padding-right: 30px;
+}
+.accordion-items .accordion-item.corner-box .toggle-title:hover {
+  cursor: context-menu;
+}
+.accordion-items .accordion-item.active.corner-box {
+  padding: 28px 18px;
+}
+.accordion-items .accordion-item.active.corner-box .toggle-title {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #5e84ff;
+}
+
+/*--------------------team----------------------------- */
+
+.team-box {
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0px 0 20px 0;
+  margin-left: 445px;
+  background: #000;
+  width: 300px;
+  overflow: hidden;
+}
+
+.team-box.active,
+.team-box:hover {
+  box-shadow: 0 0px 32px 0 #5e84ff;
+}
+.team-box.active::before,
+.team-box:hover::before {
+  border-color: #5e84ff;
+  border: 2px solid #5e84ff;
+}
+.team-box .image {
+  min-height: 310px;
+  z-index: -2;
+  padding: 2px;
+}
+.team-box .image img {
+  max-height: 310px;
+  width: 100%;
+  height: 310px;
+}
+.team-box .content {
+  position: relative;
+  z-index: 10;
+  padding: 16px 20px 0 20px;
+}
+.team-box .content .h8 {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.team-box .content p {
+  margin-bottom: 19px;
+  font-size: 14px;
+  line-height: 1.57;
+  text-transform: capitalize;
+}
+.team-box .social {
+  display: flex;
+  justify-content: center;
+}
+.team-box .social li {
+  margin-right: 12px;
+}
+.team-box .social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #5e84ff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  color: #000;
+}
+.team-box .social li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1234px) {
+  .team-box {
+    margin-left: 400px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .team-box {
+    margin-left: 300px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .team-box {
+    margin-left: 200px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .team-box {
+    margin-left: 30px;
+  }
+}
 /*--------------------footer----------------------------- */
 
 .widget-nav-menu li {
@@ -1081,9 +1526,10 @@ button.bg-light:focus {
 
 /*--- ---*/
 .about-us-section {
-  min-height: 914px;
-  padding-bottom: 0px;
-  background: url("../../public/images/backgrounds/about_us.png");
+  min-height: 714px;
+  margin-top: -100px;
+  padding-bottom: 100px;
+  background: url("../../public/images/backgrounds/main.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1104,8 +1550,8 @@ button.bg-light:focus {
 .about-us-section .about_us_text p {
   font-weight: 500;
   font-size: 22px;
-  line-height: 28px;
-  text-align: center;
+  line-height: 38px;
+  text-align: justify;
   color: rgba(255, 255, 255, 0.8);
   margin: 0px;
 }
@@ -1118,14 +1564,14 @@ button.bg-light:focus {
   top: 10px;
 }
 .about-us-section .about_us_img_left {
-  top: -80px;
-  left: -200px;
+  top: 80px;
+  left: -260px;
   width: 400px;
 }
 .about-us-section .about_us_img_right {
-  right: -250px;
+  top: 70px;
+  right: -270px;
   width: 400px;
-  top: -80px;
 }
 
 @media only screen and (max-width: 575px) {
@@ -1175,23 +1621,34 @@ button.bg-light:focus {
   height: 100%;
 }
 
-.services-items {
+.features-items {
   padding: 0;
 }
 
-.service {
-  height: 30px;
-  max-height: 30px;
+.feature {
+  height: 320px;
+  width: 320px;
+}
+.twentytwenty-container img {
+  height: 175px;
 }
 
-.game-items-section {
+
+/* --------------------------features--------------------------------- */
+
+.features-section {
+  padding-top: 132px;
+  padding-bottom: 146px;
   position: relative;
-  padding: 80px 0;
-  background: url("../../public/images/backgrounds/slider.png");
+  overflow: hidden;
+  padding-bottom: 0px;
+  background: url("../../public/images/backgrounds/main.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  z-index: 1;
+  min-height: 914px;
+  padding-bottom: 100px;
 }
 
 /*--- Download Section ---*/
@@ -1235,6 +1692,12 @@ button.bg-light:focus {
   background-color: blue;
   border-color: blue;
   color: #fff;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
 }
 
 .download-box {

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, Navigate } from "react-router-dom"
-import menus from "./menus"
+import menus from "../../data/menu-items.json"
 
 const Header = () => {
   return (
@@ -15,7 +15,12 @@ const Header = () => {
               }}
               title="Logo"
             >
-              <img src="images/logo.png" alt="logo" width={132} />
+              <img
+                src="images/logo.png"
+                alt="logo"
+                width={132}
+                loading="lazy"
+              />
             </Link>
           </div>
           <div dir="rtl" className="btn-menu">
@@ -31,7 +36,7 @@ const Header = () => {
                 className="mainnav"
                 data-menu-style="horizontal"
               >
-                <ul className="menu">
+                <ul className="menu  justify-content-center align-items-center">
                   <li>
                     <Link to="#home" className="active">
                       Home
@@ -45,10 +50,18 @@ const Header = () => {
                       </Link>
                     </li>
                   ))}
+                  <li></li>
                 </ul>
               </nav>
             </div>
           </div>
+          <iframe
+            className="github-iframe-repo"
+            src="https://ghbtns.com/github-btn.html?user=page-craft&repo=flexify&type=star&count=true&size=large"
+            width="150"
+            height="60"
+            title="GitHub"
+          ></iframe>
         </div>
       </div>
     </header>
