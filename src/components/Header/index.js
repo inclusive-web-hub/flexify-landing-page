@@ -57,7 +57,7 @@ const Header = () => {
           </div>
           <iframe
             className="github-iframe-repo"
-            src="https://ghbtns.com/github-btn.html?user=wiseaidev&repo=flexify&type=star&count=true&size=large"
+            src="https://ghbtns.com/github-btn.html?user=inclusive-web-hub&repo=flexify&type=star&count=true&size=large"
             width="150"
             height="60"
             title="GitHub"

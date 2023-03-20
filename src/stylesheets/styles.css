@@ -606,6 +606,21 @@ input::-webkit-input-placeholder {
   font-size: 17px;
 }
 /* ---------------------------banner------------------------------------- */
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.coming-soon-text {
+  margin-bottom: 10px;
+  font-size: 8px;
+  color: blue;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
 .banner-section {
   padding: 220px 0 100px;
   background: url("../../public/images/backgrounds/main.png");
@@ -617,7 +632,6 @@ input::-webkit-input-placeholder {
 .banner-section .heading-top {
   font-size: 33px;
 }
-
 
 .banner-section .person-front {
   margin-bottom: 120px;
@@ -655,7 +669,6 @@ input::-webkit-input-placeholder {
     display: none;
   }
 }
-
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-content.banner-content-inner .banner-title {
@@ -1632,7 +1645,6 @@ button.bg-light:focus {
 .twentytwenty-container img {
   height: 175px;
 }
-
 
 /* --------------------------features--------------------------------- */
 

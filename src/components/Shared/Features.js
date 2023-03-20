@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 function Certification({ certification }) {
-  const { category, title, image, link } = certification;
-  const [toggler, setToggler] = useState(false);
+  const { category, title, image, link } = certification
+  const [toggler, setToggler] = useState(false)
 
   const handleLightbox = (e) => {
     if (!link) {
-      e.preventDefault();
-      setToggler(!toggler);
+      e.preventDefault()
+      setToggler(!toggler)
     }
-  };
+  }
   return (
     <div className="bg-black shadow-dark rounded">
       <a
@@ -35,7 +35,7 @@ function Certification({ certification }) {
         </div>
       </a>
     </div>
-  );
+  )
 }
 
-export default Certification;
+export default Certification

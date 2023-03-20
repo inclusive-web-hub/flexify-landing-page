@@ -33,16 +33,33 @@ const Banner = () => {
                 </p>
                 <ul>
                   <li>
-                    <a href="/">
-                      <i className="fa  fa-chrome"></i>
+                    <span className="coming-soon-text ms-1 shadow-blue border bg-white p-1">
+                      Coming Soon!
+                    </span>
+                    <a className="disabled" href="/">
+                      <i className="fa fa-chrome"></i>
                       <span>Chrome</span>
                     </a>
                   </li>
 
                   <li>
-                    <a className="banner-content-firefox-btn" href="/">
+                    <a
+                      className="banner-content-firefox-btn"
+                      href="https://addons.mozilla.org/en-US/firefox/addon/flexify-web/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab fa-firefox"></i>
                       <span>Firefox</span>
+                    </a>
+                  </li>
+                  <li>
+                    <span className="coming-soon-text ms-1 shadow-blue border bg-white p-1">
+                      Coming Soon!
+                    </span>
+                    <a className="disabled" href="/">
+                      <i className="fa fa-edge"></i>
+                      <span>Edge</span>
                     </a>
                   </li>
                 </ul>
