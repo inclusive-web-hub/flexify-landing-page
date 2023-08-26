@@ -861,8 +861,7 @@ input::-webkit-input-placeholder {
   border-radius: 50%;
   border: none;
   background: #ffffff;
-  top: -45px;
-  right: 475px;
+  top: -160px;
   z-index: 11;
 }
 .app-live-circle-section .app-live-circle {
